@@ -41,7 +41,7 @@ const Home = () => {
         {posts.map((post) => (
           <li key={post.id}><div className='posts'><a onClick={() => fetchSingle(post.id)}><h2>{post.title}</h2></a>
           <div className='featured-img'>
-            <img src={!post.img ? 'https://qxqttcfaelniqjchzepi.supabase.co/storage/v1/object/public/images/f7c61ca2-dff8-42b7-aea6-958cab3d525d/357dfc9c-8d49-44e4-b176-3406a169a199nova.jpg' : post.img} width={'300px'} alt={post.title} />
+            <img src={!post.img ? './nova.jpg' : post.img} width={'300px'} alt={post.title} />
           </div>
           <p>By {post.author}</p>
           <p>Posted at {moment(post.inserted_at).fromNow()}</p>
