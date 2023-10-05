@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Home,SignUp, Login, Homepage, NewPost, EditPost, SinglePost } from './pages';
+import { Home,SignUp, Login, Homepage, NewPost, EditPost, SinglePost, AboutUs } from './pages';
 import {Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 const App = () => {
 
@@ -31,8 +32,9 @@ const App = () => {
         {token?<Route path={'/dashb'} element={ <Homepage token={token} />} />:""}
         {token?<Route path={'/newpost'} element={ <NewPost token={token} />} />:""}
         {token?<Route path={`/editpost/:id`} element={ <EditPost token={token} />} />:""}
-
+        {token?<Route path={`/about-us/`} element={ <AboutUs token={token} />} />:""}
       </Routes>
+      <Footer />
      
       
     </div>

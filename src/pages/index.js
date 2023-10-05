@@ -5,7 +5,8 @@ import Homepage from './Homepage'
 import SinglePost from './Single'
 import NewPost from './NewPost'
 import EditPost from './EditPost'
+import AboutUs from './AboutUs'
 
 export {
-    Home,Login, SignUp, Homepage, SinglePost, NewPost, EditPost
+    Home,Login, SignUp, Homepage, SinglePost, NewPost, EditPost, AboutUs
 }

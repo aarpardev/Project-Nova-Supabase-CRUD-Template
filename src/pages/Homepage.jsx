@@ -43,6 +43,20 @@ const fetchSingle = async (rowId) => {
   }
 }
 
+const fetchSomeData = async (rowId) => {
+  try {
+    const { data, error } = await supabase.from('posts').select().eq('id', rowId);
+    
+    if (error) {
+      console.error('Error fetching default data:', error);
+    } else {
+      localStorage.setItem('postdata', JSON.stringify(data));
+    }
+  } catch (error) {
+    console.error('Error fetching extra data:', error);
+  }
+}
+
 const fetchEdit = async (rowId) => {
   try {
     const { data, error } = await supabase.from('posts').select().eq('id', rowId);
@@ -75,6 +89,7 @@ const deletePost = async (id) => {
       console.log(`You're not logged in! GTFO`)
     } else {
       fetchPosts()
+      fetchSomeData(2)
     }
   })
 
