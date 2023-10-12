@@ -3,6 +3,7 @@ import { Home,SignUp, Login, Homepage, NewPost, EditPost, SinglePost, AboutUs } 
 import {Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import './App.css';
 
 const App = () => {
 
