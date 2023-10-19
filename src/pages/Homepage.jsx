@@ -94,29 +94,34 @@ const deletePost = async (id) => {
   })
 
   return (
-    <div>
-      <h3>Hi, {token.user.user_metadata.full_name}</h3>
-      <button onClick={handleLogout}>Logout</button>
-      <div className='postlist'>
-        <h2>Your Posts</h2>
-        <p><Link to='/newpost'>Add New Post</Link></p>
-      <ul>
+    <div className='homeposts'>
+      <div className='postindex'>
+        <h1>The Home</h1>
+        <article className='postlist'>
+        <ul>
         {posts.map((post) => (
-          <li key={post.id}><a onClick={() => fetchSingle(post.id)}><h2>{post.title}</h2></a>
+          <li key={post.id}>
           <div className='featured-img'>
-            <img src={!post.img ? './nova.jpg' : post.img} width={'300px'} alt={post.title} />          
+            <img src={!post.img ? './nova.jpg' : post.img} width={'300px'} alt={post.title} />
           </div>
-          <p>Posted: {moment(post.inserted_at).fromNow()}</p>
+          
+          <div className='eachpost'><a onClick={() => fetchSingle(post.id)}><h2>{post.title}</h2></a>
+          <p>By {post.author}</p>
+          <p>Posted at {moment(post.inserted_at).fromNow()}</p>
           <p>{post.description}</p>
+          </div>
           <div style={{ marginLeft: 'none' }}>
                 <button onClick={() => fetchEdit(post.id)}>Edit Post</button>
                 <button onClick={() => deletePost(post.id)} style={{ marginLeft: 'none' }}>Delete Post</button>
               </div>
           </li>
         ))}
-      </ul></div>
-
-    </div>
+      </ul>
+        </article></div>
+        <aside className='sidebar'>
+          <h2>Site Stats</h2>
+        </aside>
+      </div>
   )
 }
 

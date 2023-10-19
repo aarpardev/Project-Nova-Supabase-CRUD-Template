@@ -1,12 +1,10 @@
 #root {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  padding: 10px;
+  width:100%;
 }
 
 .logo {
-  height: 6em;
+  height: 1em;
   padding: 1.5em;
   will-change: filter;
 }
@@ -39,3 +37,36 @@
 .read-the-docs {
   color: #888;
 } 
+
+.homeposts {
+  max-width:1200px;
+  display: flex;
+  justify-content: space-between;     
+  height: 100%;
+  padding: 15px;
+  gap: 5px;
+  margin: 0 auto;
+}
+
+.postlist { 
+    /* flex:1 1 auto; */
+    flex-grow:1;
+}
+
+.postlist li {
+    display: flex;
+    justify-content: flex-start;
+    padding: 15px;
+   gap: 5px;
+    margin: 0 auto;
+}
+
+.featured-img {
+    width: 300px;
+}
+
+.eachpost {
+  min-width:320px;
+  max-width:400px;
+  padding: 10px;
+}

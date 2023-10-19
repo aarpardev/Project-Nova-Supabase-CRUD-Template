@@ -33,23 +33,31 @@ const Home = () => {
   useEffect(() => {
     fetchPosts()  
   })
+
     return (
-      <div>
+      <div className='homeposts'>
+      <div className='postindex'>
         <h1>The Home</h1>
-        <div className='postlist'>
+        <article className='postlist'>
         <ul>
         {posts.map((post) => (
-          <li key={post.id}><div className='posts'><a onClick={() => fetchSingle(post.id)}><h2>{post.title}</h2></a>
+          <li key={post.id}>
           <div className='featured-img'>
             <img src={!post.img ? './nova.jpg' : post.img} width={'300px'} alt={post.title} />
           </div>
+          
+          <div className='eachpost'><a onClick={() => fetchSingle(post.id)}><h2>{post.title}</h2></a>
           <p>By {post.author}</p>
           <p>Posted at {moment(post.inserted_at).fromNow()}</p>
-          <p>{post.description}</p></div>
+          <p>{post.description}</p>
+          </div>
           </li>
         ))}
       </ul>
-        </div>
+        </article></div>
+        <aside className='sidebar'>
+          <h2>Related Posts</h2>
+        </aside>
       </div>
     )
   }

@@ -1,0 +1,25 @@
+.navbar {
+    max-width:1200px;
+  display: flex;
+  justify-content: space-between;     
+  height: 100%;
+  padding: 15px;
+  gap: 5px;
+  margin: 0 auto;
+}
+
+.thelogo {
+    align-content: flex-start;
+    height: 2em;
+    padding: 1.5em;
+}
+
+.navbar ul {
+    display: flex;
+    text-align: right;
+}
+
+.navbar li {
+    list-style: none;
+    padding:10px 10px 10px 10px;
+}

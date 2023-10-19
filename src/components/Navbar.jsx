@@ -1,16 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+import './navbar.css'
 
 const Navbar = ({token}) => {
 
     
     return (
         <div className="navbar">
-            <img src="src/assets/react.svg" alt="logo" />
-            <ul>
+            <div className='thelogo'><img src="src/assets/react.svg" alt="logo" /></div>
+            <div className='topmenu'><ul>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/about-us">About Us</Link></li>
-            </ul>
+            </ul></div>
         </div>
     )
  }
