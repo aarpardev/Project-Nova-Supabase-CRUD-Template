@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Home,SignUp, Login, Homepage, NewPost, EditPost, SinglePost, AboutUs } from './pages';
-import {Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import NavbarMobile from './components/NavbarMobile';
 import Footer from './components/Footer';
 import './App.css';
 
@@ -24,7 +25,7 @@ const App = () => {
 
  
   return (
-    <div><Navbar />
+    <div><Navbar /><NavbarMobile />
       <Routes>
         <Route path={'/'} element={ <Home />} />
         <Route path={'/signup'} element={ <SignUp />} />

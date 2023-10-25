@@ -38,10 +38,10 @@ const Home = () => {
       <div className='homeposts'>
       <div className='postindex'>
         <h1>The Home</h1>
-        <article className='postlist'>
-        <ul>
+        <div className='postlist'>
+        <ul className='postsdata'>
         {posts.map((post) => (
-          <li key={post.id}>
+          <li className='singlepost' key={post.id}>
           <div className='featured-img'>
             <img src={!post.img ? './nova.jpg' : post.img} width={'300px'} alt={post.title} />
           </div>
@@ -54,10 +54,10 @@ const Home = () => {
           </li>
         ))}
       </ul>
-        </article></div>
-        <aside className='sidebar'>
+        </div></div>
+        <div className='sidebar'>
           <h2>Related Posts</h2>
-        </aside>
+        </div>
       </div>
     )
   }
