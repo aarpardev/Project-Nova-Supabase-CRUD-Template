@@ -43,11 +43,8 @@ const SignUp = () => {
     }
   }
 
-
-
-
   return (
-    <div>
+    <div className='forms'>
       <form onSubmit={handleSubmit}>
         <input 
           placeholder='Fullname'
@@ -67,14 +64,14 @@ const SignUp = () => {
           type="password"
           onChange={handleChange}
         />
-
+        <div className='formaction'>
         <button type='submit'>
           Submit
-        </button>
+        </button></div>
 
 
       </form>
-      Already have an account?<Link to='/'>Login</Link> 
+      Already have an account?<Link to='/backdoor'>Login</Link> 
     </div>
   )
 }

@@ -37,9 +37,10 @@ const SinglePost = () => {
 
 
 return (
+  <div className='singletosee'>
   <article>
         {posts.map((post) => (
-          <div className='post-block' key={post.id}><h2>{post.title}</h2>
+          <div className='singlepost' key={post.id}><h2>{post.title}</h2>
           <h3>{post.description}</h3>
           <div className='featured-img'>
             <img src={!post.img ? 'https://qxqttcfaelniqjchzepi.supabase.co/storage/v1/object/public/images/f7c61ca2-dff8-42b7-aea6-958cab3d525d/357dfc9c-8d49-44e4-b176-3406a169a199nova.jpg' : post.img} width={'300px'} alt={post.title} />
@@ -53,6 +54,10 @@ return (
           </div>
         ))}
       </article>
+      <div className='sidebar'>
+          <h2>Related Posts</h2>
+      </div>
+  </div>
 )
 }
 

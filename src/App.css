@@ -38,15 +38,7 @@
   color: #888;
 } 
 
-.homeposts {
-  max-width:1200px;
-  display: flex;
-  justify-content: space-between;     
-  height: 100%;
-  padding: 15px;
-  gap: 5px;
-  margin: 0 auto;
-}
+
 
 .postlist { 
     /* flex:1 1 auto; */
@@ -69,4 +61,12 @@
   min-width:320px;
   max-width:400px;
   padding: 10px;
+}
+
+.singlepage {
+    max-width:800px;   
+    height: 100%;
+    padding: 15px;
+    gap: 5px;
+    margin: 0 auto;
 }

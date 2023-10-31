@@ -54,6 +54,33 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.forms {
+  max-width:600px;
+  display: flex;  
+  /* flex-flow: column; */ 
+  flex-direction: column;     
+  height: 100%;
+  padding: 15px;
+  gap: 5px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+form > input {
+  width:300px;
+}
+
+input {
+  margin:10px auto;
+  width:250px;
+}
+
+.formaction {
+  margin:0 auto;
+  width:100px;
+  padding:10px;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -68,6 +95,38 @@ button:focus-visible {
 } 
 
 @media (min-width: 769px) {
+
+  .homeposts {
+    max-width:1200px;
+    display: flex;
+    justify-content: space-around;     
+    height: 100%;
+    padding: 15px;
+    gap: 5px;
+    margin: 0 auto;
+  }
+
+  .singletosee {
+    max-width:1200px;
+    display: flex;
+    justify-content: space-around;     
+    height: 100%;
+    padding: 15px;
+    gap: 5px;
+    margin: 0 auto;
+  }
+
+  .singlepost {
+    max-width:900px;
+    display: flex;
+    /* flex-flow: column; */ 
+    flex-direction: column;     
+    height: 100%;
+    padding: 15px;
+    gap: 5px;
+    margin: 0 auto;
+  }
+
   .homeposts > .postindex > .postlist > .postsdata > .singlepost {
     display: flex;
     list-style: none;
