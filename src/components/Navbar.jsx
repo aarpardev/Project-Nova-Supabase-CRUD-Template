@@ -5,14 +5,15 @@ import './navbar.css'
 const Navbar = ({token}) => {
 
     
-    return (
+    return ( 
+    <div className="topnav">
         <div className="navbar">
             <div className='thelogo'><img src="src/assets/react.svg" alt="logo" /></div>
             <div className='topmenu'><ul>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/about-us">About Us</Link></li>
             </ul></div>
-        </div>
+        </div></div>
     )
  }
 

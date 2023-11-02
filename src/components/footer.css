@@ -1,9 +1,11 @@
+
+
 @media (min-width: 770px) {
 
 .footercontent {
-    max-width:1200px;
-    margin: 0px;
-    padding:10px;
+    margin:0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    width: 100%;
 }
 
 li {
